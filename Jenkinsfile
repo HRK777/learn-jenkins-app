@@ -31,6 +31,8 @@ pipeline {
                         exit 1
                     fi
 
+                    npm test
+
                 '''
             }
         }
