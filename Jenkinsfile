@@ -23,6 +23,14 @@ pipeline {
             steps {
                 sh '''
                     echo 'Test stage'
+
+                    if [ -e src/index.html ]; then
+                        echo 'src/index.html exists'
+                    else
+                        echo 'src/index.html not found'
+                        exit 1
+                    fi
+
                 '''
             }
         }
